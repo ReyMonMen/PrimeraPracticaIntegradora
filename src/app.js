@@ -9,9 +9,10 @@ import cartsRouter from './routes/cartsRouter.js';
 
 const PORT = 8083;
 
+
 void (async() =>
 {
-    await mongoose.connect( "mongodb+srv://reymonmen:reymon80@codercluster.tswnzyd.mongodb.net/example1", {
+    await mongoose.connect( process.env.MONGO_DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
       });
